@@ -5,7 +5,7 @@ use bindings::Windows::Win32::{
 
 static MOD: HOT_KEY_MODIFIERS = MOD_ALT;
 static KEY: u32 = b'1' as u32;
-static MAGNIFYING_FACTOR: f32 = 2.0;
+static MAGNIFYING_FACTOR: f32 = 1.8;
 static TIMER_MS: u32 = 8;
 
 struct MagInfo {
@@ -27,6 +27,7 @@ impl MagInfo {
             y = GetSystemMetrics(SM_CYSCREEN);
         }
 
+        // Dead-zone size ~= 200px
         let k = (x as f32 / 9.0) as i32;
         let mul_x = x as f32 * (1.0 - 1.0 / MAGNIFYING_FACTOR) / (x - 2 * k) as f32;
         let mul_y = y as f32 * (1.0 - 1.0 / MAGNIFYING_FACTOR) / (y - 2 * k) as f32;
