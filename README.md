@@ -8,4 +8,9 @@ magni is a simple, fast and smooth windows magnifer
 cargo build --release
 ```
 
-## Customize
+### Build dependencies
+
+* msvc
+* rust-msvc toolchain
+
+## Configure
