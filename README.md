@@ -1,4 +1,5 @@
 # Magni
+**This repository has been deprecated. Use [magfy](https://github.com/waneon/magfy) instead.**
 
 Magni is a simple, fast and smooth windows magnifer
 
